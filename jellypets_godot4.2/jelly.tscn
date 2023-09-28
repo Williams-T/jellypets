@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://1qi6u8j3jhvs"]
+
+[ext_resource type="Texture2D" uid="uid://milnt63pwykx" path="res://Assets/jelly/arm_right.png" id="1_jwe84"]
+[ext_resource type="Texture2D" uid="uid://bs126y18jaxqm" path="res://Assets/jelly/torso.png" id="2_5l7vm"]
+[ext_resource type="Texture2D" uid="uid://c1gy7nnqocdxq" path="res://Assets/jelly/arm_left.png" id="3_40tm7"]
+[ext_resource type="Texture2D" uid="uid://7n2lkdbpm142" path="res://Assets/jelly/jelly_head.png" id="4_ldb0p"]
+[ext_resource type="Texture2D" uid="uid://b4coy1d1qit4n" path="res://Assets/jelly/eye stuff/whites.png" id="5_tm5b3"]
+[ext_resource type="Texture2D" uid="uid://dgil5l78dxe64" path="res://Assets/jelly/eye stuff/pupils/pupils.png" id="6_j3hm1"]
+[ext_resource type="Texture2D" uid="uid://u0b4u537qx11" path="res://Assets/jelly/eye stuff/lids/jelly_lids_upper.png" id="7_73aff"]
+
+[node name="Jelly" type="Node2D"]
+texture_filter = 1
+
+[node name="torso" type="Sprite2D" parent="."]
+position = Vector2(1, -33)
+texture = ExtResource("2_5l7vm")
+
+[node name="right_arm" type="Sprite2D" parent="torso"]
+texture = ExtResource("1_jwe84")
+
+[node name="left_arm" type="Sprite2D" parent="torso"]
+texture = ExtResource("3_40tm7")
+
+[node name="head" type="Sprite2D" parent="."]
+z_index = 2
+texture_filter = 1
+position = Vector2(1, -33)
+texture = ExtResource("4_ldb0p")
+
+[node name="whites" type="Sprite2D" parent="head"]
+z_index = -1
+texture = ExtResource("5_tm5b3")
+
+[node name="pupils" type="Sprite2D" parent="head"]
+z_index = -1
+texture = ExtResource("6_j3hm1")
+
+[node name="lids" type="Sprite2D" parent="head"]
+z_index = -1
+texture = ExtResource("7_73aff")
